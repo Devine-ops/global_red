@@ -199,12 +199,11 @@ public function update(UserRequest $request, User $id)
         ],200);
     }
 
-
 -Destroy:
 
 public function destroy(User $id)
-    {
-        try{
+{
+try{
 
             $id->delete();
 
@@ -212,7 +211,7 @@ public function destroy(User $id)
                 'status' => true,
                 'message' => "Usuário exluido com sucesso!",
             ],200);
-    
+
         } catch(Exception $e){
             DB::rollback();
 
