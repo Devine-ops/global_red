@@ -13,11 +13,13 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::orderBy('id', 'DESC')->get();
+        $users = User::orderBy('id', 'ASC')->get();
+
+        return view('home',['users' => $users]);
 
         return response()->json([
             'status' => true,
-            'usuário' => $user
+            'usuário' => $users
         ],200);
     }
 
