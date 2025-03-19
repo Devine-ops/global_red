@@ -1,3 +1,33 @@
+## Progrmas necessários para utilizar:
+
+MySql- verificar banco de dados
+VsCode - para rodar o código ou outro edito de código de preferencia.
+Composer - Para gerenciar dependencias
+PHP - Utilizado na construção da API
+Postman ou Insominia para requisições HTTP.
+
+## Rotas para utilizar o Postman/Insominia
+
+Listar todos:
+GET
+http://127.0.0.1:8000/api/users
+
+Listar por id:
+GET
+http://127.0.0.1:8000/api/users/{id}
+
+Criar no banco de dados um novo usuário:
+POST
+http://127.0.0.1:8000/api/users
+
+Editar:
+PUT
+http://127.0.0.1:8000/api/users/{id}
+Deletar:
+
+DELETE
+http://127.0.0.1:8000/api/users/{id}
+
 ## Instalar o laravel 11
 
 comando composer create-project laravel/laravel . "11.\*"
@@ -26,7 +56,11 @@ php artisan make:seed UserSeeder
 
 php artisan db:seed --class=DatabaseSeeder
 
+Com esse comando são gerador 10 usuários aleatórios com nome, email e senha
+
 ## Request
+
+Esse é o arquivo que verifica o que vem do POST e PUT para criar e editar novos usuários.
 
 php artisan make:request UserRequest
 
