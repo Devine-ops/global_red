@@ -15,7 +15,7 @@ class UserController extends Controller
     {
         $users = User::orderBy('id', 'ASC')->get();
 
-        return view('home',['users' => $users]);
+        // return view('home',['users' => $users]);
 
         return response()->json([
             'status' => true,
